@@ -1,0 +1,52 @@
+{% extends "ComplaintMS/index.html" %}
+
+
+{% load crispy_forms_tags %}
+{% block content %}
+
+<style>
+  body {
+    background: #ffffff; 
+  }
+
+  .jbg{
+    background: #ffffff;
+  }
+</style>
+
+<div  class="jumbotron text-center jbg">
+        <h1 style="color:rgb(110, 110, 110)">Complaint Management System</h1>
+        <p style="color:rgb(99, 99, 99)">Choose your Preferred Login Below</p> 
+      </div>
+
+          {% load static %}
+      <center>
+    
+        <div class="row d-flex justify-content-center ">
+        <div class="col-sm-3">
+         <div class="card mx-auto ">
+          <div class="col">
+              <br> 
+            <img src="{% static 'ComplaintMS/img/seclgn.png' %}" class="img-rounded" alt="Cinque Terre">
+            
+            <p></p>
+            <a href="/signin/"><button type="button" class="btn  btn-primary">Student/Staff Login</button></a>
+           </div>
+           </div>
+          </div>
+        <div class="col-sm-3">
+         <div class="card mx-auto">
+          <div class="col">
+
+                <br>
+            <img src="{% static 'ComplaintMS/img/adminn.png' %}" class="img-rounded" alt="Cinque Terre">
+            <p></p>
+           <a href="/admin/" class="btn  btn-danger">Admin Login</a>
+          </div>
+          </div>
+        </div>
+       </div>
+</center> 
+      </body>
+
+  {% endblock content %}
